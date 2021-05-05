@@ -45,6 +45,7 @@
             <tr>
                 <th class="text-right">NO.</th>
 				<th>IDTRUCK</th>
+                <th>STATUS</th>
 				<th>CREATED AT</th>
 				<th>UPDATED AT</th>
 				<th class="text-center">PROSES</th>
@@ -53,6 +54,7 @@
             <tr>
 				<td width="80px" class="text-right"><?php echo ++$start ?></td>
 				<td><?php echo $t00_check->idtruck ?></td>
+                <td><?php echo $t00_check->Status == 1 ? "IN" : "OUT" ?></td>
 				<td><?php echo $t00_check->created_at ?></td>
 				<td><?php echo $t00_check->updated_at ?></td>
 				<td style="text-align:center" width="200px">

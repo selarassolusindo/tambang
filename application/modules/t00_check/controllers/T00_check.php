@@ -211,6 +211,15 @@ class T00_check extends CI_Controller
 
     public function create_action2($idtruck)
     {
+        $status = 1;
+        $row = $this->T00_check_model->getLastStatus($idtruck);
+        if ($row) {
+            if ($row->Status == 1) {
+                $status = 0;
+            } else {
+                $status = 1;
+            }
+        }
         // $this->_rules();
 
         // if ($this->form_validation->run() == FALSE) {
@@ -218,6 +227,7 @@ class T00_check extends CI_Controller
         // } else {
             $data = array(
 				'idtruck' => $idtruck,
+                'Status' => $status,
 				// 'created_at' => $this->input->post('created_at',TRUE),
 				// 'updated_at' => $this->input->post('updated_at',TRUE),
 			);

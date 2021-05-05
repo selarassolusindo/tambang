@@ -70,6 +70,13 @@ class T00_check_model extends CI_Model
         $this->db->delete($this->table);
     }
 
+    function getLastStatus($idtruck)
+    {
+        $this->db->where('idtruck', $idtruck);
+        $this->db->order_by('idcheck', 'desc');
+        return $this->db->get($this->table)->row();
+    }
+
 }
 
 /* End of file T00_check_model.php */

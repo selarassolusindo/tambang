@@ -12,9 +12,13 @@
     <body>
         <h2 style="margin-top:0px">T00_check <?php //echo $button ?></h2> -->
         <form action="<?php echo $action; ?>" method="post">
-			<div class="form-group">
+            <div class="form-group">
             	<label for="int">IDTRUCK <?php echo form_error('idtruck') ?></label>
             	<input type="text" class="form-control" name="idtruck" id="idtruck" placeholder="IDTRUCK" value="<?php echo $idtruck; ?>" />
+        	</div>
+            <div class="form-group">
+            	<label for="int">STATUS <?php echo form_error('Status') ?></label>
+            	<input type="text" class="form-control" name="Status" id="Status" placeholder="STATUS" value="<?php echo $Status; ?>" />
         	</div>
 			<div class="form-group">
             	<label for="timestamp">CREATED AT <?php echo form_error('created_at') ?></label>
